@@ -1,0 +1,52 @@
+// 星空样式代码
+.starry-night {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  // 渐变泛白
+  background-color: #000;
+}
+@function setShadow($n) {
+  $res: "#{random(100)}vw #{random(100)}vh #fff";
+  @for $i from 1 through $n {
+    $res: "#{$res},#{random(100)}vw #{random(100)}vh #fff";
+  }
+  @return unquote($res);
+}
+$count: 1000;
+$duration: 1000s;
+@for $i from 1 through 3 {
+  $count: $count / 2;
+  $duration: $duration / 2;
+  @debug $count;
+  .layer#{$i} {
+    $size: $i * 1px;
+    position: absolute;
+    width: $size;
+    height: $size;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: setShadow($count);
+    animation: move $duration linear infinite;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 100vh;
+      width: inherit;
+      height: inherit;
+      background-color: #fff;
+      border-radius: inherit;
+      box-shadow: setShadow($count);
+    }
+  }
+}
+
+@keyframes move {
+  100% {
+    transform: translateY(-100vh);
+  }
+}

@@ -19,7 +19,8 @@
   "dependencies": {
     "@babel/preset-env": "^7.28.3",
     "core-js": "^3.45.1",
-    "regenerator": "^0.14.12"
+    "regenerator": "^0.14.12",
+    "sass": "^1.92.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.28.3",
