@@ -1,0 +1,29 @@
+{
+  "name": "engineering",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel babel/source.js --out-file babel/compiled.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swaggylc/Engineering.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swaggylc/Engineering/issues"
+  },
+  "homepage": "https://github.com/swaggylc/Engineering#readme",
+  "dependencies": {
+    "@babel/preset-env": "^7.28.3",
+    "core-js": "^3.45.1",
+    "regenerator": "^0.14.12"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.4",
+    "@babel/plugin-transform-optional-chaining": "^7.27.1"
+  }
+}
